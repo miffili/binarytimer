@@ -1,0 +1,198 @@
+/* Set Root Font Size & Interface Width for different Sizes */
+
+:root {
+  font-size: 9px;
+}
+
+.interface {
+  width: auto;
+}
+
+@media all and (min-width: 350px){
+  :root {
+    font-size: 12px;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .interface {
+    min-width: none;
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 550px){
+  .interface {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 780px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .interface {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 1090px) {
+
+  .interface {
+    width: 30%;
+  }
+}
+
+/* App Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html,
+body {
+  font-family: "Comfortaa", monospace;
+  font-size: 2rem;
+  font-weight: 300;
+  background: #000 url(https://images.unsplash.com/photo-1496096265110-f83ad7f96608?auto=format&fit=crop&w=1950&q=80) no-repeat; /* fallback for old browsers */
+  background-size: cover;
+  color: hsla(189, 100%, 50%, 1);
+}
+
+button {
+  padding: 0.4rem;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: hsla(189, 100%, 45%, 0.5);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.75);
+  color: inherit;
+  text-shadow: 0 0 8px hsla(180, 100%, 85%, 0.7);
+}
+
+button:disabled {
+  background-color: hsla(0, 0%, 0%, 0);
+  color: hsla(189, 100%, 45%, 0.5);
+  text-shadow: none;
+  cursor: default;
+}
+
+a {
+  padding: 4px 6px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.2;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 3px;"
+}
+
+span {
+  display: inline-block;
+  padding: 2px 3px;
+}
+
+.container {
+  height: 100vh;
+  background-color: hsla(180, 100%, 2%, 0.85);
+}
+
+.interface {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  box-shadow: 0 0 0.5rem 0.1rem rgba(150, 150, 150, 0.1);
+  border-radius: 5px;
+}
+
+.interface > * {
+  width: 100%;
+}
+
+.binary-display {
+  min-height: 30%;
+  box-sizing: border-box;
+  border: 0.25rem solid hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px 5px 0 0;
+}
+
+.binary-item {
+  min-width: 2rem;
+  height: 1.2rem;
+  text-align: center;
+  background: hsla(189, 100%, 45%, 0.15);
+  border-radius: 5px;
+}
+
+.active {
+  background: hsla(189, 100%, 45%, 0.7);
+  box-shadow: 0 0 1px hsla(180, 100%, 85%, 0.5);
+}
+
+.timer-display {
+  padding: 1rem 0.5rem;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 0 0 8px hsla(180, 100%, 85%, 0.7);
+}
+
+.settings {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+}
+
+.setting-options {
+  padding: 0 1rem;
+}
+
+.setting-options > * {
+  margin: 0.2rem;
+}
+
+.toggle-timer {
+  width: 6rem;
+}
+
+/* App Layout */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.binary-display {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.2em;
+}
+
+.setting-options {
+  display: flex;
+  justify-content: center;
+}
+
+.setting-options > * {
+  flex-grow: 1;
+}
