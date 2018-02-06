@@ -8,5 +8,4 @@ A few weeks prior to AGDQ2018 I learned about the binary number system in the ba
 • CSS3  
 • vanilla JavaScript
 
-**Live Preview**  
-[📺](https://miffili.github.io/binarytimer)
+[📺 **Live Preview**](https://miffili.github.io/binarytimer)
